@@ -1,12 +1,14 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Button } from 'antd';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './views/Home'
 
 function App() {
   return (
-    <div className="App">
-      测试
-      <Button type='primary'>测试</Button>
+    <div className="App" style={{height: '100vh'}}>
+      <BrowserRouter>
+        <Route path='/home' component={Home} ></Route>
+      </BrowserRouter>
     </div>
   );
 }
